@@ -29,7 +29,7 @@ To set up the Login Accounts Website on your local machine, follow these steps:
 - To use Google sign-in button, you have to clone the project.
 - Then go inside `Sign-in-Google` folder by using `cd Sign-in-Google`.
 - Deploy it on your local server.
-- Especially, your local server should be `http://localhost:5500`.
+- Especially, your local server should be `http://127.0.0.1:5500` [you can direct use it].
 - Finally, you will use the Google sign-in functionality successfully.
 
 ## Screenshots
