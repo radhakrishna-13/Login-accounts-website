@@ -23,7 +23,8 @@
                     <input class="btn" type="text" placeholder="Username">
                     <input class="btn" type="email" placeholder="Your email id">
                     <input class="btn" type="password" placeholder="Create Password">
-                    <strong><label style="margin: 35px;"><input type="checkbox">I accept the <a href="#">term & conditions</a></label></strong>
+                    <strong><label style="margin: 35px;"><input type="checkbox">I accept the <a href="#">term &
+                                conditions</a></label></strong>
                 </form>
                 <button class="Signup">SIGN UP</button>
             </div>
@@ -39,8 +40,8 @@
                         <i class="fa-brands fa-twitter"></i>
                         Connect with Twitter</button>
                 </a>
-                <a href="./Sign-in-Google/index.html">
-                    <button class="ftg" style="background-color: red;">
+                <a>
+                    <button class="ftg" style="background-color: red;" onclick="changePage()">
                         <i class="fa-brands fa-google"></i>
                         Connect with Google</button>
                 </a>
@@ -51,6 +52,11 @@
             Already have an account?<span>Login Now</span>
         </div>
     </div>
+    <script>
+        function changePage() {
+            window.location.href = "http://localhost:5500/google.html";
+        }
+    </script>
 </body>
 
 </html>

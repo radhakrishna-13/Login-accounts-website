@@ -1,28 +1,28 @@
-let id = document.querySelector(".id")
-let name = document.querySelector(".name")
-let image = document.querySelector(".image")
-let email = document.querySelector(".email");
-let data = document.querySelector(".data");
+function SignIn() {
+  var oauth2Endpoint = "https://accounts.google.com/o/oauth2/v2/auth"
+  let form = document.createElement('form');
+  form.setAttribute('method', 'GET')
+  form.setAttribute('action', oauth2Endpoint)
+  
+  // alert("cleck")
+  let params = {
+    "client_id": "490009917900-3oboafpmio292r5gg99ie7nod4bgrkpg.apps.googleusercontent.com",
+    "redirect_uri": "http://127.0.0.1:5500/redirect.html",
+    "response_type": "token",
+    "scope": "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/youtube",
+    "include_granted_scopes": "true",
+    'state': "pass-through-value"
+  }
 
-// data.style.display = "none";
+  for (var p in params) {
+    let input = document.createElement("input");
+    input.setAttribute("name", p);
+    input.setAttribute("value", params[p]);
+    input.setAttribute("type", "hidden"),
+      form.appendChild(input)
+  }
 
-function onSignIn(googleUser) {
-    data.style.display = "block";
-    var profile = googleUser.getBasicProfile();
-    id.innerHTML = `<p>Id = ${profile.getId()}</p>`
-    name.innerHTML = `<p>Name = ${profile.getName()}</p>`
-    image.innerHTML = `<p>Image URL = ${profile.getImageUrl()}</p>`
-    email.innerHTML = `<p>Email = ${profile.getEmail()}</p>`
-    // console.log('ID: ' + ); // Do not send to your backend! Use an ID token instead.
-    // console.log('Name: ' + );
-    // console.log('Image URL: ' + );
-    // console.log('Email: ' + ); // This is null if the 'email' scope is not present.
+  document.body.appendChild(form);
+  form.submit()
 }
 
-function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      alert('User signed out.');
-      data.style.display = "none";
-    });
-  }
