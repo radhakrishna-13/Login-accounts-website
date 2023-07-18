@@ -15,7 +15,7 @@ Welcome to the Login Accounts Website repository! This project aims to provide a
 
 This project utilizes the following technologies:
 
-- **Frontend**: HTML5, CSS3
+- **Frontend**: HTML5, CSS3, Js
 
 ## Setup Instructions
 
