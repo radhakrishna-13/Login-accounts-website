@@ -17,13 +17,20 @@ This project utilizes the following technologies:
 
 - **Frontend**: HTML5, CSS3, Js
 
-## Setup Instructions
+## Setup and Instructions
 
 To set up the Login Accounts Website on your local machine, follow these steps:
 
 1. Clone this repository: `git clone https://github.com/Arshdeep-13/Login-accounts-website.git`
 2. Navigate to the project directory: `cd Login-accounts-website`
 3. Open the index.html file in your preferred web browser.
+
+### Google Sign-In
+- To use Google sign-in button, you have to clone the project.
+- Then go inside `Sign-in-Google` folder by using `cd Sign-in-Google`.
+- Deploy it on your local server.
+- Especially, your local server should be `http://localhost:5500`.
+- Finally, you will use the Google sign-in functionality successfully.
 
 ## Screenshots
 
