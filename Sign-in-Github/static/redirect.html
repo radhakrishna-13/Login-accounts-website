@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github information</title>
+</head>
+
+<body>
+    <h1>you are redirected</h1>
+    <script>
+        // Function to get the value of the token from the URL
+        function getTokenFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('token');
+        }
+
+        // Use the token as needed
+        const token = getTokenFromURL();
+        console.log('Token:', token);
+
+        // Example: Display the token on the page
+        const tokenParagraph = document.createElement('p');
+        tokenParagraph.textContent = `Token: ${token}`;
+        document.body.appendChild(tokenParagraph);
+
+        // You can use the token for further API requests or other operations as needed
+        // Example: Fetch user information using the token
+        // fetch('https://api.github.com/user', {
+        //   headers: {
+        //     'Authorization': `token ${token}`,
+        //   },
+        // })
+        // .then(response => response.json())
+        // .then(data => {
+        //   console.log('User Info:', data);
+        // });
+    </script>
+</body>
+
+</html>
